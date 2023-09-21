@@ -14,7 +14,8 @@ load_dotenv()
 
 scheduler = AsyncIOScheduler(timezone="Europe/Minsk")
 
-bot = Bot(token=os.environ.get('TOKEN'), parse_mode="HTML")
+PROXY_URL = "http://proxy.server.3128"
+bot = Bot(token=os.environ.get('TOKEN'), proxy=PROXY_URL, parse_mode="HTML")
 dp = Dispatcher(bot)
 ID = 1160001485
 id = 644784412
